@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="icon" href="./logo.png" type="image/x-icon">
+    <title>Dining | Bohemian Haven</title>
+</head>
+<body>
+    <header class="header4">
+        <!--Background image-->
+        <!--Navigation bar-->
+        <nav class="navbar">
+            <section class="logo">Bohemian Haven - Unawatuna</section>
+            <input type="checkbox" id="checkbox_toggle" />
+            <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+            <ul class="nav-links">
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./locations.html">Locations</a></li>
+                <li><a href="./rooms.html">Rooms</a></li>
+                <li><a href="./dining.html">Dining</a></li>
+                <li><a href="./adventures.html">Adventures</a></li>
+                <li><a href="#index">Booking & contact</a></li>
+            </ul>
+        </nav>
+        <!--Booking form-->
+        <main class="content">
+        <section class="hero3">
+            <h1>Book Your Stay</h1>
+        </section>
+            <section class="booking-form">
+                <h2>Room Reservation Form</h2>
+                <!--Customer Information-->
+                    <section class="input-info">
+                        <label>Name:</label>
+                        <input type="text" id="fullname" placeholder="Enter your full name" required>
+                    </section>
+                    <section class="input-info">
+                        <label>E-mail:</label>
+                        <input type="email" id="email" placeholder="Enter your E-mail Address" required>
+                    </section>
+                    <section class="input-info">
+                        <label>Mobile Number:</label>
+                        <input type="text" id="number" placeholder="Enter your mobile number" required>
+                    </section>
+                <!--Date-->
+                <section class="data-selection">
+                    <section class="date">
+                        <label>Check-in Date:</label>
+                        <input type="date"  id="date1" required>
+                    </section>
+                    <section class="date">
+                        <label>Check-out date:</label>
+                        <input type="date" id="date2" required>
+                    </section>
+                </section>
+                <!--Number of guests-->
+                <section class="data-selection">
+                    <section class="input-info">
+                        <label>Number of Guests:</label>
+                        <input type="number" id="guests" placeholder="Number of adult guests (Above '18')" required>
+                    </section>
+                    <section class="input-info">
+                        <label>Number of Kids:</label>
+                        <input type="number" id="kids" placeholder="Number of Kids(Above age of '5')">
+                    </section>
+                </section>
+                <!--Room selection-->
+                <section class="room-selection">
+                    <section class="input-info1">
+                        <label>Single Rooms</label>
+                        <input type="number"  min="0"  id="SingleRoom" placeholder="Number of Single rooms needed">
+                    </section>
+                    <section class="input-info-extra">
+                        <label>Extra Bed</label>
+                        <select onclick="singleRoomValueChange();" name="require" id="require1">
+                            <option  value="select">select</option>
+                            <option  value="yes">Yes</option>
+                            <option value="no">No</option>
+                        </select>
+                    </section>
+                    <section class="input-info1">
+                        <label>Double Rooms</label>
+                        <input type="number" id="DoubleRoom" min="0"   placeholder="Number of Double rooms needed">
+                    </section>
+                    <section class="input-info-extra">
+                        <label>Extra Bed</label>
+                        <select name="require" onclick="doubleRoomValueChange();" id="require2">
+                            <option  value="select">select</option>
+                            <option value="yes">Yes</option>
+                            <option value="no">No</option>
+                        </select>
+                    </section>
+                    <section class="input-info1">
+                        <label>Triple Rooms</label>
+                        <input type="number"  id="TripleRoom"  min="0"  placeholder="Numebr of Triple rooms needed">
+                    </section>
+                    <section class="input-info-extra">
+                        <label>Extra Bed</label>
+                        <select name="require" onclick="tripleRoomValueChange();" id="require3">
+                            <option  value="select">select</option>
+                            <option value="yes">Yes</option>
+                            <option value="no">No</option>
+                        </select>
+                    </section>
+                </section>
+                <!--Additional requests-->
+                <section class="additional-info">
+                    <label for="message">Additional information/Special requests:</label>
+                    <input type="text" id="message" placeholder="Let us know if you have something special going on.">
+                </section>
+                <!--promo code-->
+                <section class="promo-code">
+                    <label>Enter Your Promo Code</label>
+                    <input type="text" id="promoCode"  placeholder="Enter your promo code if available.">
+                    <a href="#tot" onclick="promoCode();" class="button">Submit</a>
+                </section>
+                <!--details view-->
+                <Section class="details-view">
+                    <P  id="detailsSingle"></P>
+                    <P  id="detailsDouble"></P>
+                    <P  id="detailsTriple"></P>
+                    <P  id="detailsKids"></P>
+                    <P  id="discount"></P>
+                    
+                </Section>
+                <!--Total-->
+                <section id="tot" class="booking-total">
+                   <legend>Your Total:</legend>
+                   <p id="cost">Rs. 0.00</p>
+                </section>
+                <!--Buttons-->
+                <section class="submit-button">
+                    <a href="#" onclick="saveBookingLater();" class="button">Save Booking for later</a>
+                    <a href="#" onclick="saveBook();" class="button">Book Now</a>
+                </section>
+            </section>
+            <!--Adventure-->
+            <section class="booking-form">
+                <h2>Adventure Reservation</h2>
+                <!--Customer details-->
+                <h4>Local Packs</h4>
+                <section class="data-selection">
+                    <section class="input-info">
+                        <label>Local Adults:</label>
+                        <input type="number"  min="0"  id="localAdults" placeholder="Number of Local adults">
+                    </section>
+                    <section class="input-info">
+                        <label>Number of Hours:</label>
+                        <input type="number" min="0"   id="numberofHours" placeholder="Numebr of Hours">
+                    </section>
+                    <section class="input-info-extra1">
+                        <label>Guide Requirement:</label>
+                        <select name="require" onchange="changeValue1();" id="require4">
+                            <option value="select">Select</option>
+                            <option value="yes">Yes</option>
+                            <option value="no">No</option>
+                        </select>
+                    </section>
+                </section>
+                <section class="data-selection">
+                    <section class="input-info">
+                        <label>Local Kids:</label>
+                        <input type="number" id="localKids" min="0"  placeholder="Number of Local kids">
+                    </section>
+                    <section class="input-info">
+                        <label>Number of Hours</label>
+                        <input type="number" id="numberofHours2" min="0"  placeholder="Numebr of Hours">
+                    </section>
+                    <section class="input-info-extra1">
+                        <label>Guide Requirement:</label>
+                        <select name="require" onchange="changeValue2();" id="require5">
+                            <option value="select">Select</option>
+                            <option value="yes">Yes</option>
+                            <option value="no">No</option>
+                        </select>
+                    </section>
+                </section>
+                <h4>Foreign Packs</h4>
+                <section class="data-selection">
+                    <section class="input-info">
+                        <label>Foreign Adults:</label>
+                        <input type="number" id="foreignAdults" min="0"  placeholder="Numebr of Foreign adults">
+                    </section>
+                    <section class="input-info">
+                        <label>Number of Hours:</label>
+                        <input type="number" id="numberofHours3" min="0"  placeholder="Numebr of Hours">
+                    </section>
+                    <section class="input-info-extra1">
+                        <label>Guide Requirement:</label>
+                        <select name="require" onchange="changeValue3();" id="require6">
+                            <option value="select">Select</option>
+                            <option value="yes">Yes</option>
+                            <option value="no">No</option>
+                        </select>
+                    </section>
+                </section>
+                <section class="data-selection">
+                    <section class="input-info">
+                        <label>Foreign Kids:</label>
+                        <input type="number" id="foreignKids" min="0"  placeholder="Number of Foreign kids">
+                    </section>
+                    <section class="input-info">
+                        <label>Number of Hours</label>
+                        <input type="number" id="numberofHours4" min="0" placeholder="Numebr of Hours">
+                    </section>
+                    <section class="input-info-extra1">
+                        <label>Guide Requirement:</label>
+                        <select name="require" onchange="changeValue4();" id="require7">
+                            <option value="select">Select</option>
+                            <option value="yes">Yes</option>
+                            <option value="no">No</option>
+                        </select>
+                    </section>
+                </section>
+                <h3>Note: A guide per adult will cost LKR 1,000/- and a guide per kids will cost LKR 500/-</h3>
+                <section class="booking-total">
+                    <legend>Total Adventure cost:</legend>
+                    <p onchange="total();" id="total">Rs. 0.00</p>
+                </section>
+                <section class="submit-button">
+                    <a href="#sec" id="button" onclick="summery();"  class="button">Make Reservation</a>
+                </section>
+            </section>
+            <section id="sec" class="booking-form">
+                <span>Booking Summary</span>
+                <section class="total-box">
+                    <fieldset>
+                        <legend>Room Charge</legend>
+                        
+                            <P class="details-1"  id="detailsSingle2"></P>
+                            <P class="details-1" id="detailsDouble2"></P>
+                            <P class="details-1" id="detailsTriple2"></P>
+                            <P class="details-1" id="detailsKids2"></P>
+                            <P class="details-1" id="discount2"></P>
+                            <p id="output1"></p>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Adventure Total:</legend>
+                        
+                            <P class="details-1" id="detailsSingle3"></P>
+                            <P class="details-1" id="detailsDouble3"></P>
+                            <P class="details-1" id="detailsTriple3"></P>
+                            <P class="details-1" id="detailsKids3"></P>
+                            <p id="output2"></p>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Grand Total</legend>
+                        <P class="details-1" id="detailsSingle4"></P>
+                            <P class="details-1" id="detailsDouble4"></P>
+                        <p id="output3"></p>
+                    </fieldset>
+                </section>
+            </section>
+            <section class="contact-info">
+                <h2>Contact Information</h2>
+                <p><b>If you have any questions or need any assistance, please don't hesitate to contact us:</b></p>
+                <p><b>E-mail: infor@Bohemianhaven.lk</b></p>
+                <p><b>Phone: +9411 456 7890</b></p>
+                <p><b>Address: 97/b Media rd, Unawatuna</b></p>
+            </section>
+        </main>
+    <footer class="footer1">
+        <section class="item8">&copy; 2023 Bohemian Haven. All rights reserved.</section>
+    </footer>
+    <script src="js.js"></script>
+</body>
+</html>

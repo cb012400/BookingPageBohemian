@@ -1,0 +1,631 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+/*navigation bar*/
+.logo {
+    display: flex;
+    font-size: 20px;
+    justify-content: left;
+}
+
+.logo a {
+    text-decoration: none;
+}
+  
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+    background-color: transparent;
+    position: sticky;
+    background-color: #000000;
+    opacity: 70%;
+    height: 6vh;
+    width: 100%;
+}
+  
+.nav-links {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: end;
+    align-items: center;
+    padding: 0;
+    padding-left: 3rem;
+    list-style: none;
+    overflow:hidden;
+    transition: all 0.2s ease-out;
+    width: 100%;
+}
+
+.nav-links a {
+    text-decoration: none;
+    padding: 15px;
+    font-family: 'Franklin Gothic Medium',sans-serif;
+    text-align: center;
+    color: rgb(255, 255, 255);  
+    transition: all 0.2s ease-out;
+    font-size: clamp(10px,1.5vw,40px);
+}
+  
+.nav-links a:hover {
+    background-color:rgb(79, 79, 79);
+}
+
+.hamburger {
+    display: none;
+    font-size: 20;
+    user-select: none;
+}
+
+input[type=checkbox] {
+    display: none;
+}
+
+ /*buttons*/
+.button {
+    display: inline-block;
+    background-color: #220657;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(255, 255, 255);
+    height: 15px;
+    width: 70px;
+    padding: .5rem 1.5rem;
+    align-content: center;
+    text-decoration:solid;
+}
+
+/*booking*/
+.header4 {
+    background: url(./booking2.png);
+    background-size: cover;
+    background-position: top;
+    font-family: roboto;
+    color: rgb(255, 254, 254);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    position: sticky;
+    height: 22rem;
+    width: 100%;
+}
+
+.hero3 {
+    color: rgb(16, 2, 91);
+    padding: 5rem;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family:'Times New Roman', Times, serif;
+    font-size: 45px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    width: 100%;
+}
+
+.content {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    color: #010c26;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+    font-size: 22px;
+    background-image: url(./booking2.png);
+    background-position: center;
+}
+
+.booking-form, .contact-info {
+    width: 80%;
+    padding: 2%;
+    background-color: #ffffff;
+    border-radius: 50px;
+    box-shadow: 0 0 25px #220657;
+    margin: 10px;
+    background-color: transparent;
+    justify-content: center;
+}
+
+.booking-form h2, .booking-form h3, .contact-info h2 {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.booking-form h4{
+    margin-top: 20px;
+    margin-bottom: 30px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.booking-form label, .booking-form textarea {
+    display: block;
+    justify-content: center;
+    margin-right: 10px;
+    margin-bottom: 0px;
+}
+
+.data-selection{
+    display: flex;
+    width: 100%;
+    column-gap: 5%;
+    text-align: center;
+    justify-content: center;
+}
+
+.room-selection{
+    display: flex;
+    width: 100%;
+    column-gap: 5%;
+    text-align: center;
+    justify-content: center;
+}
+
+.data-selection .input-info{
+    width: 250px;
+    display: block;
+}
+
+.input-info-extra{
+    font-size: medium;
+    text-align: center;
+    display: block;
+    margin: 5px;
+}
+
+.data-selection .input-info1{
+    width: 250px;
+    display: block;
+    border-radius: 10px;
+}
+
+.room-selection .input-info1{
+    width: 250px;
+    display: block;
+    border-radius: 10px;
+}
+
+.input-info input[type="text"],
+.input-info input[type="email"],
+.input-info input[type="number"],
+.input-info1 input[type="number"],
+.input-info textarea {
+    width: 98%;
+    height: 30px;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    justify-content: center;
+}
+
+.booking-form input[type="date"]{
+    width: 150px;
+    height: 20px;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    justify-content: center;
+}
+
+.data-selection h3{
+    text-align: center;
+}
+
+.additional-info input{
+    width: 98%;
+    height: 100px;
+    padding-left: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    justify-content: center;
+    text-align: start;
+}
+
+.promo-code{
+    display: grid;
+    justify-content: center;
+    padding-bottom: 40px;
+}
+
+.promo-code label{
+    padding-left: 25px;
+}
+
+.promo-code input{
+    width: 100%;
+    padding-left: 10px;
+    height: 40px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.promo-code a{
+    margin-top: 5px;
+    margin-left: 65px;
+    display: flex;
+    justify-content: center;
+    border-radius: 5px;
+}
+
+.promo-code a:hover{
+    background-color: lightskyblue;
+    transition: 1s ease;
+    color: black;    
+}
+
+.booking-total{
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 35px;
+}
+
+.submit-button{
+    display: flex;
+    column-gap: 15px;
+    justify-content: center;
+}
+
+.submit-button a {
+    display: block;
+    width: 150px;
+    margin: 0 auto;
+    background-color: #220657;
+    color: #fff;
+    text-align: center;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+}
+
+.submit-button a:hover{
+    background-color: lightskyblue;
+    transition: .7s ease;
+    color: black;
+}
+
+/*Adventure Booking*/
+.input-info-advnture{
+    display: flex;
+    column-gap: 5%;
+    padding-left: 10%;
+}
+
+.input-info-hours{
+    width: 50%;
+    margin-top: 10px;
+}
+
+.input-info-extra1{
+    font-size: medium;
+    width: 10%;
+    margin-top: 10px;
+}
+
+.contact-info p {
+    margin-bottom: 10px;
+}
+
+.total-box{
+    display: flex;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    width: 100%;
+    flex-direction: column;
+    border: 3px solid darkblue;
+    margin: 5px;
+    border-radius: 20px;
+    align-items: center;
+}
+
+span{
+    font-weight: 800;
+    margin-left: 43%;
+}
+
+fieldset{
+    font-weight: 400;
+    text-align: center;
+    border: 2.6px solid darkblue;
+    width: 90%;
+    height: 200px;
+    border-radius: 5px;
+    background-color: rgb(164, 245, 237);
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.details-1{
+    text-align: start;
+    margin-left: 10px;
+}
+#output1,
+#output2,
+#output3{
+    font-size: 20px;
+    color: black;
+}
+
+/*footer*/
+.container {
+    max-width: 1280px;
+    margin: auto;
+    font-family: Roboto;
+    padding-left: 70px;
+}
+.row {
+    display: flex;
+}
+ul {
+    list-style: none;
+}
+.footer {
+    background-color: #010c26;
+    padding: 30px 0;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+}
+  
+.footer-col {
+    width: 100%;
+    padding: 0 15px;
+}
+  
+.footer-col h4 {
+    font-size: 25px;
+    color: #fefefe;
+    text-transform: capitalize;
+    margin-bottom: 35px;
+    font-weight: 500;
+    position: relative;
+}
+.footer-col h4::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background-color: #ffffff;
+    height: 2px;
+    box-sizing: border-box;
+    width: 50px;
+}
+.footer-col ul li:not(:last-child) {
+    margin-bottom: 10px;
+}
+.footer-col ul li a {
+    font-size: 16px;
+    text-transform: capitalize;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 300;
+    color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    position: sticky;
+    transition: all 0.5s ease;
+}
+.footer-col ul li a:hover {
+    padding-left: 8px;
+}
+.footer-col .social-links a {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: rgba(255, 255, 255, 0.2);
+    margin: 0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #ffffff;
+    transition: all 0.5s ease;
+}
+.footer-col .social-links a:hover {
+    color: #ffffff;
+    background-color: #dfdfdf;
+}
+.ft {
+    font-size: 15px;
+    font-family: Oswald;
+    font-weight: 100;
+    color: #00000049;
+    padding-left: 5rem;
+    padding-right: 5rem ;
+    padding-top: 15px;
+}
+  
+.footer1 {
+    background-color: gray;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+    width: 100%;
+}
+  
+/*Media Queries*/
+@media(max-width:900px){
+    html, body {
+        width: 100%;
+        margin: 0px;
+        padding: 0px;
+        overflow-x: hidden;
+    }
+    .header4{
+        justify-content: center;
+        height: 250%;
+    }
+    .logo{
+        justify-content: left;
+        font-size: 23px;
+        width: 70%;
+    }
+    .navbar{
+        height: 15%;
+        background-color: #010c26;
+    }
+    .nav-links{
+        display:none;
+        position: static;
+        background-color:#010c26;
+        right: 0;
+        left: 0;
+        text-align: right;
+        justify-content: center;
+        padding: 5px 0;
+    }
+    .nav-links a {
+        font-size: 20px;
+    }
+    .nav-links li + li{
+        margin-top: 12px;
+    }
+    input[type=checkbox]:checked ~ .nav-links {
+        display: block;
+    }
+    .hamburger{
+        display: block;
+        font-size: 30px;
+    }
+    .dropdown {
+        transform: translatex(40%);
+    }
+
+    .booking-form, .contact-info{
+        width: 350px;
+        max-height: fit-content;
+        text-align: center;
+    }
+
+    .input-info{
+        max-width: 320px;
+        text-align: center;
+
+    }
+
+    .room-selection {
+        flex-direction:column;
+        height: fit-content;
+        justify-content: center;
+        margin-left: 35px;
+    }
+
+    .data-selection{
+        flex-direction: column;
+        justify-content: center;
+        margin-left: 35px;
+    }
+    
+    .room-selection input[type="number"]{
+        flex-direction: column;
+        max-width: 320px;
+    }
+
+    .input-info1 input[type="number"]{
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .input-info-extra1{
+        display: flex;
+        max-width: 50px;
+        margin-left: 30px;
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .input-info-extra{
+        display: flex;
+        max-width: 50px;
+        margin-left: 50px;
+        font-size: 20px;
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    .booking-form input[type="date"]{
+        width: 150px;
+        height: 20px;
+        padding: 10px;
+        margin-bottom: 50px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        margin-left: -55px;
+    }
+
+    .input-info input[type="email"],
+    .input-info input[type="number"],
+    .input-info textarea {
+        width: 200px;
+        height: 30px;
+        padding: 10px;
+        margin-left: 20px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        justify-content: center;
+    }
+
+    .submit-button{
+        display: flex;
+        column-gap: 5px;
+        justify-content: center;
+    }
+
+    .submit-button a {
+        display:inline;
+        width: 50px;
+        height: 65px;
+        margin: auto;
+        background-color: #220657;
+        color: #fff;
+        text-align: center;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 10px;
+    }
+
+    .footer{
+        justify-content: center;
+        align-items: center;
+        display: grid;
+        grid-template-columns: auto;
+        text-align: center;
+    }
+    .footer-col{
+        text-align: center;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 20px;
+    }
+    .footer-col ul li a{
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        
+    }
+    .footer-col h4::before {
+        content: "";
+        position: absolute;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        left: 35%;
+        bottom: -10px;
+        background-color: #ffffff;
+        height: 2px;
+        box-sizing: border-box;
+        width: 100px;
+    }
+}
